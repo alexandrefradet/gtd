@@ -1,0 +1,35 @@
+@import '../../../assets/scss/main-styles.scss';
+
+.layout-box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    overflow: hidden;
+
+    page-content {
+        // div will take all of the remaining space
+        flex-grow: 1;
+        overflow-y: scroll;
+    }
+}
+
+.top-bar {
+    width: 100%;
+    height: 68px;
+    background: linear-gradient(to right, $green-dark, $green-light);
+
+    box-shadow: 0 0 10 0 rgba(black, 0.5);
+
+    display: flex;
+    flex-shrink: 0; // prevent the top bar from being shrink / squash
+
+    // Center child animate (the heading)
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        color: black;
+        font-size: 32px;
+    }
+}
