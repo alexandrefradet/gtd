@@ -1,0 +1,16 @@
+@import "../../../assets/scss/main-styles.scss";
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 650px;
+
+    margin: auto;
+
+    padding-top: 50px;
+
+    .search-bar-container {
+        border: 1px solid $green-dark;
+    }
+}
