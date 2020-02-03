@@ -7,6 +7,8 @@ import { Component, ElementRef, Input, OnInit, Renderer2, ViewChild } from '@ang
 })
 export class NoteCardComponent implements OnInit {
 
+  @Input() note: any;
+
   @ViewChild('truncator', {static: true}) truncator: ElementRef<HTMLElement>;
   @ViewChild('bodyText',  {static: true}) bodyText:  ElementRef<HTMLElement>;
 
