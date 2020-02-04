@@ -1,0 +1,17 @@
+.form-container {
+  max-width: 500px;
+  margin:auto;
+
+  .field {
+    margin-top: 35px;
+  }
+}
+
+input, textarea {
+  &.ng-invalid.ng-touched {
+    border: 1px solid red;
+    &focus {
+      box-shadow: 0 0 0 2px red;
+    }
+  }
+}
