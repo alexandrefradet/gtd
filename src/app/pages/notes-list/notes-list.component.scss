@@ -16,10 +16,21 @@
 
   .notes-list {
     margin-top: 35px;
+    margin-bottom: 70px;
   }
 
   app-note-card {
     display: block;
     margin-bottom: 25px;
   }
+}
+
+.floating-add-button {
+  position: fixed;
+  bottom: 50px;
+  width: 650px;
+  border-radius: 0;
+  margin: auto;
+
+  font-size: 24px;
 }

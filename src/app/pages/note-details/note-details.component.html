@@ -17,7 +17,7 @@
 
     <div class="field is-grouped is-pulled-right">
       <div class="control">
-        <button class="button is-text" ngModel="note.content" type="button">Cancel</button>
+        <button class="button is-text" ngModel="note.content" (click)="onCancel()" type="button">Cancel</button>
       </div>
       <div class="control">
         <button class="button is-text is-primary" type="submit" [disabled]="noteForm.invalid">Save</button>

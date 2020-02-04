@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { Note } from './note.model';
 
 @Injectable({
@@ -6,7 +6,10 @@ import { Note } from './note.model';
 })
 export class NotesService {
 
-  notes: Note[];
+  notes: Note[] = [
+    {title: "title1", content: "content1"},
+    {title: "title2", content: "content2"},
+  ];
 
   constructor() { }
 
@@ -23,6 +26,10 @@ export class NotesService {
   }
 
   public delete(id:number) {
-    this.notes.slice(id);
+    this.notes.splice(id);
+  }
+
+  getAll() {
+    return this.notes;
   }
 }

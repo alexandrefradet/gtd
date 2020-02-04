@@ -1,4 +1,5 @@
-import { Component, ElementRef, Input, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, OnInit, Output, Renderer2, ViewChild } from '@angular/core';
+import { Note } from '../shared/note.model';
 
 @Component({
   selector: 'app-note-card',
@@ -7,7 +8,11 @@ import { Component, ElementRef, Input, OnInit, Renderer2, ViewChild } from '@ang
 })
 export class NoteCardComponent implements OnInit {
 
-  @Input() note: any;
+  @Input() note: Note;
+  @Input() id: number;
+
+  // Event sent to parent on X click
+  @Output('delete') deleteEvent: EventEmitter<void> = new EventEmitter<void>();
 
   @ViewChild('truncator', {static: true}) truncator: ElementRef<HTMLElement>;
   @ViewChild('bodyText',  {static: true}) bodyText:  ElementRef<HTMLElement>;
@@ -19,8 +24,6 @@ export class NoteCardComponent implements OnInit {
     // work out if there is a text overflow and if not, hide the truncator
     const style = window.getComputedStyle(this.bodyText.nativeElement, null);
     const viewwableHeight = parseInt(style.getPropertyValue("height"), 10);
-    console.log('viewable : ' + viewwableHeight);
-    console.log('scrollHeight' + this.bodyText.nativeElement.scrollHeight);
 
     if (this.bodyText.nativeElement.scrollHeight > viewwableHeight) {
       this.renderer.setStyle(this.truncator.nativeElement, 'display', 'block');
@@ -29,4 +32,7 @@ export class NoteCardComponent implements OnInit {
     }
   }
 
+  deleteNote(id: number) {
+    this.deleteEvent.emit()
+  }
 }
