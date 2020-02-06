@@ -26,7 +26,7 @@ export class NotesService {
   }
 
   public delete(id:number) {
-    this.notes.splice(id);
+    this.notes.splice(id, 1);
   }
 
   getAll() {
