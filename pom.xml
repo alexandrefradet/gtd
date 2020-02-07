@@ -8,6 +8,8 @@
   <artifactId>gtd-parent</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
+  <packaging>pom</packaging>
+
   <modules>
     <module>gtd-front</module>
     <module>gtd-back</module>
