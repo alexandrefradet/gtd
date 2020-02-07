@@ -1,6 +1,14 @@
-# Notes Front
+# GTD - Getting things done
 
-Note taking app which will be the first brick of my angular app for using the [Getting Things Done](https://gettingthingsdone.com/) methodology (i'm currently reading the book).
+I'm tring to make a easy-to-use, responsive and power-user friendly (ie: custom to me, at first) to use the [Getting Things Done](https://gettingthingsdone.com/) methodology for my personal and professional organization (i'm currently reading the book).
 
-Credits to [Devstackr Youtube tutorial](https://www.youtube.com/playlist?list=PLIjdNHWULhPR5cr7nkTvq6kTV8rbr6BVz) which i'll used as a basis to help me get started as i haven't done much Angular lately and still need to improve a lot on my css (animation, transition, etc...)
+Front will be Angular 8 (probably 9 later)
+Backend will be Java 11 with Spring-Boot
+At some point i'll dockerize everything.
+The aim is also to learn to use gitlab-ci effectively.
+
+Feel free to fork or try it for you !
+
+Credits to [Devstackr Youtube tutorial](https://www.youtube.com/playlist?list=PLIjdNHWULhPR5cr7nkTvq6kTV8rbr6BVz) whose Angular tutorial helped me get started for the frontend as i haven't done much Angular lately.
+He also give some nice tips for css (animation, transition, etc...)
 
