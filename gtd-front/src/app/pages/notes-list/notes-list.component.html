@@ -13,10 +13,9 @@
 
     <div class="notes-list" [@listAnim]>
         <app-note-card
-          *ngFor="let note of notes; index as i"
+          *ngFor="let note of notes"
           [note]="note"
-          [id]="i"
-          (delete)="deleteNote(i)"
+          (delete)="deleteNote(note.id)"
           [@itemAnim]>
         </app-note-card>
     </div>

@@ -90,10 +90,13 @@ export class NotesListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.notes = this.notesService.getAll();
+    this.notesService.getAll().subscribe(result => this.notes = result);
   }
 
   deleteNote(id: number) {
-    this.notesService.delete(id);
+    const self = this;
+    this.notesService.delete(id).toPromise()
+      .then(result => this.notes.splice(self.notes.findIndex(note => note.id == id),1))
+      .catch(a => console.log("Fail to delete"));
   }
 }

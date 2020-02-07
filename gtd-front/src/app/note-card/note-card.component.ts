@@ -32,7 +32,8 @@ export class NoteCardComponent implements OnInit {
     }
   }
 
-  deleteNote(id: number) {
+  deleteNote() {
+    console.log("delete 1");
     this.deleteEvent.emit()
   }
 }
