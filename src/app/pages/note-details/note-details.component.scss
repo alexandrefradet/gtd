@@ -1,9 +1,15 @@
+@import "../../../assets/scss/main-styles";
+
 .form-container {
   max-width: 500px;
   margin:auto;
 
   .field {
     margin-top: 35px;
+  }
+
+  .textarea {
+    border-color: lighten($primary, 5%);
   }
 }
 
