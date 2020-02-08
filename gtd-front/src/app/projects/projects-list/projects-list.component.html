@@ -1,7 +1,10 @@
-<p>projects-list works!</p>
+<div class="page-container">
 
-<div *ngFor="let project of projects">
-    Projet name : {{project?.name}}
+    <p>projects-list works!</p>
 
-    Step 1 label : {{project?.steps[0]?.label}}
+    <div *ngFor="let project of projects">
+        Projet name : {{project?.name}}
+
+        Step 1 label : {{project?.steps[0]?.label}}
+    </div>
 </div>
