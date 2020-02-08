@@ -10,6 +10,7 @@ import { NoteDetailsComponent } from './pages/note-details/note-details.componen
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { ProjectsListComponent } from './projects/projects-list/projects-list.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     NotesListComponent,
     MainLayoutComponent,
     NoteCardComponent,
-    NoteDetailsComponent
+    NoteDetailsComponent,
+    ProjectsListComponent
   ],
   imports: [
     BrowserModule,

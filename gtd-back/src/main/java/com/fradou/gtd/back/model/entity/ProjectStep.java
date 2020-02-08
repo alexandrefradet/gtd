@@ -1,5 +1,6 @@
 package com.fradou.gtd.back.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -33,5 +34,6 @@ public class ProjectStep {
 
     @NotNull
     @ManyToOne
+    @JsonBackReference
     private Project project;
 }

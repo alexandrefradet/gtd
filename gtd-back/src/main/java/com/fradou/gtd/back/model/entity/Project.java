@@ -1,5 +1,6 @@
 package com.fradou.gtd.back.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fradou.gtd.back.model.entity.enums.EProjectStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -46,5 +47,6 @@ public class Project {
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true, mappedBy = "project")
     @OrderBy(value = "stepPosition")
+    @JsonManagedReference
     private List<ProjectStep> steps;
 }
