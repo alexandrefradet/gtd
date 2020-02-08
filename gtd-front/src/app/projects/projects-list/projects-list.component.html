@@ -1,10 +1,10 @@
 <div class="page-container">
-
-    <p>projects-list works!</p>
-
-    <div *ngFor="let project of projects">
-        Projet name : {{project?.name}}
-
-        Step 1 label : {{project?.steps[0]?.label}}
+    <h1>My projects</h1>
+    <div class="projects-list" [@listAnim]>
+        <app-project-card
+                [@itemAnim]
+                *ngFor="let project of projects"
+                [project]="project">
+        </app-project-card>
     </div>
 </div>

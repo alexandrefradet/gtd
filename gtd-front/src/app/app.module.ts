@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectsListComponent } from './projects/projects-list/projects-list.component';
+import { ProjectCardComponent } from './projects/project-card/project-card.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ProjectsListComponent } from './projects/projects-list/projects-list.co
     MainLayoutComponent,
     NoteCardComponent,
     NoteDetailsComponent,
-    ProjectsListComponent
+    ProjectsListComponent,
+    ProjectCardComponent
   ],
   imports: [
     BrowserModule,

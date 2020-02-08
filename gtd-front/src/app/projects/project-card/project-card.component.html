@@ -1,0 +1,15 @@
+<div class="project-card-container">
+    <div class="project-card-content">
+        <div class="project-card-title">
+            {{project?.name}}
+        </div>
+        <div class="project-card-body">
+
+        </div>
+        <div class="project-card-steps">
+            <div class="project-steps" *ngFor="let step of project?.steps">
+                {{step.label}}
+            </div>
+        </div>
+    </div>
+</div>
