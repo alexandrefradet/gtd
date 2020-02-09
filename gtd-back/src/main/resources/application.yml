@@ -6,6 +6,8 @@ spring:
     open-in-view: false
     hibernate:
       ddl-auto: create-drop
+    # TODO Remove before prod
+    show-sql: true
   datasource:
     password: postgres
     username: postgres

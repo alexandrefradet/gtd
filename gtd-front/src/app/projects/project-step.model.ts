@@ -1,6 +1,6 @@
 import { Project } from './project.model';
 
-export interface ProjectStep {
+export interface ProjectAction {
 
   id: number;
   label: string;

@@ -1,5 +1,5 @@
 import { ProjectStatus } from './project-status.enum';
-import { ProjectStep } from './project-step.model';
+import { ProjectAction } from './project-step.model';
 
 export class Project {
   id: number;
@@ -7,5 +7,5 @@ export class Project {
   creationDate: Date;
   completionDate: Date;
   status: ProjectStatus;
-  steps: ProjectStep[];
+  actions: ProjectAction[];
 }
