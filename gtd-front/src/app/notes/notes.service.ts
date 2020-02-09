@@ -11,7 +11,7 @@ export class NotesService {
   /**
    * TODO :
    * - error management
-   * - return on post
+   * - return on post / update
    */
 
   private readonly BASE_URL: string = "http://localhost:8080/notes";

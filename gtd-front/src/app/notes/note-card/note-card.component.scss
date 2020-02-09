@@ -1,4 +1,4 @@
-@import "../../assets/scss/main-styles";
+@import "../../../assets/scss/main-styles";
 
 .note-card-container {
   position: relative;
@@ -60,7 +60,7 @@
   width: 34px;
 
   background-color: lighten($pink, 35%);
-  background-image: url('../../assets/close.svg');
+  background-image: url('../../../assets/close.svg');
   background-size: 20px;
   background-repeat: no-repeat;
   background-position: center;

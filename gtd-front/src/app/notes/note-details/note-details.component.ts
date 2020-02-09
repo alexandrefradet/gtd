@@ -1,7 +1,7 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Note } from '../../shared/note.model';
-import { NotesService } from '../../shared/notes.service';
+import { Note } from '../note.model';
+import { NotesService } from '../notes.service';
 import { ActivatedRoute, ParamMap, Params, Router } from '@angular/router';
 import { map, switchMap } from 'rxjs/operators';
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NotesService } from '../../shared/notes.service';
-import { Note } from '../../shared/note.model';
+import { NotesService } from '../notes.service';
+import { Note } from '../note.model';
 import { cardAnimation } from '../../shared/animations';
 
 @Component({

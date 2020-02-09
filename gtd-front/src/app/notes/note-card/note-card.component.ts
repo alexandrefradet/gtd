@@ -1,5 +1,5 @@
 import { Component, ElementRef, EventEmitter, Input, OnInit, Output, Renderer2, ViewChild } from '@angular/core';
-import { Note } from '../shared/note.model';
+import { Note } from '../note.model';
 
 @Component({
   selector: 'app-note-card',

@@ -1,7 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
-@import './assets/scss/main-styles.scss';
+/**** Lib / dependencies styels ****/
+
+// Bulma
 @import '../node_modules/bulma/bulma.sass';
+
+// Fontawesome
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+
+/**** CUSTOM STYLES ****/
+
+// Custom - split in var and other
+@import './assets/scss/main-styles.scss';
 
 .page-container {
   display: flex;

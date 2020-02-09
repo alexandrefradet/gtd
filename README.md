@@ -20,3 +20,10 @@ He also give some nice tips for css (animation, transition, etc...)
 docker run --name gtd-postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=gtd -p 5432:5432 -d postgres
 ```
 
+## TODO
+
+- enable search bar
+- implements Angular Material / remove Bulma
+
+- pick a nice color scheme
+- exctract common styles / animations
