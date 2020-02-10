@@ -11,13 +11,13 @@
         </div>
     </div>
 
-    <div class="notes-list" [@listAnim]>
-        <app-note-card
-          *ngFor="let note of notes"
-          [note]="note"
-          (delete)="deleteNote(note.id)"
+    <div class="incomings-list" [@listAnim]>
+        <app-incoming-card
+          *ngFor="let incoming of incomings"
+          [incoming]="incoming"
+          (delete)="deleteIncoming(incoming.id)"
           [@itemAnim]>
-        </app-note-card>
+        </app-incoming-card>
     </div>
   <button class="button floating-add-button is-primary" routerLink="new">+ Add</button>
 </div>

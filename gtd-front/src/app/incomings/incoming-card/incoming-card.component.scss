@@ -1,6 +1,6 @@
 @import "../../../assets/scss/main-styles";
 
-.note-card-container {
+.incoming-card-container {
   position: relative;
 
   background: white;
@@ -22,16 +22,16 @@
     }
   }
 
-  .note-card-content {
+  .incoming-card-content {
     padding: 25px;
 
-    .note-card-title {
+    .incoming-card-title {
       font-size: 22px;
       font-weight: bold;
       color: $primary;
     }
 
-    .note-card-body {
+    .incoming-card-body {
       position: relative;
       max-height: 80px;
       overflow: hidden;

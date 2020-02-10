@@ -1,7 +1,7 @@
 package com.fradou.gtd.back.controller;
 
-import com.fradou.gtd.back.model.entity.Note;
-import com.fradou.gtd.back.service.NoteService;
+import com.fradou.gtd.back.model.entity.Incoming;
+import com.fradou.gtd.back.service.IncomingService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -17,36 +17,36 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("notes")
+@RequestMapping("incomings")
 @Slf4j
 @AllArgsConstructor
 @CrossOrigin("*")
-public class NoteController {
+public class IncomingController {
 
-    private NoteService noteService;
+    private IncomingService incomingService;
 
     @GetMapping
-    public List<Note> getAllNotes() {
-        return noteService.getAllNotes().getContent();
+    public List<Incoming> getAllIncomings() {
+        return incomingService.getAllIncomings().getContent();
     }
 
     @GetMapping("/{id}")
-    public Note getAllNotes(@PathVariable Long id) {
-        return noteService.getNote(id);
+    public Incoming getIncomings(@PathVariable Long id) {
+        return incomingService.getIncoming(id);
     }
 
     @PostMapping
-    public Note createNote(@RequestBody Note note) {
-        return noteService.create(note);
+    public Incoming createIncoming(@RequestBody Incoming incoming) {
+        return incomingService.create(incoming);
     }
 
     @PutMapping("/{id}")
-    public Note updateNote(@PathVariable Long id, @RequestBody Note note) {
-        return noteService.update(id, note);
+    public Incoming updateIncoming(@PathVariable Long id, @RequestBody Incoming incoming) {
+        return incomingService.update(id, incoming);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteNote(@PathVariable Long id) {
-        noteService.delete(id);
+    public void deleteIncoming(@PathVariable Long id) {
+        incomingService.delete(id);
     }
 }

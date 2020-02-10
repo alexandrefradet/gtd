@@ -1,0 +1,14 @@
+<div #container class="incoming-card-container">
+    <a [routerLink]="['/incomings/', incoming.id]">
+      <div class="incoming-card-content">
+        <h2 class="incoming-card-title">{{ incoming.title }}</h2>
+
+        <div #bodyText class="incoming-card-body">
+          <p>{{ incoming.content }}</p>
+          <div #truncator class="fade-out-truncation"></div>
+        </div>
+      </div>
+    </a>
+
+  <div class="x-button" (click)="deleteIncoming()"></div>
+</div>

@@ -1,11 +1,11 @@
 package com.fradou.gtd.back.utils;
 
 import com.fradou.gtd.back.model.entity.NextAction;
-import com.fradou.gtd.back.model.entity.Note;
+import com.fradou.gtd.back.model.entity.Incoming;
 import com.fradou.gtd.back.model.entity.Project;
 import com.fradou.gtd.back.model.entity.enums.EProjectStatus;
 import com.fradou.gtd.back.repository.NextActionRepository;
-import com.fradou.gtd.back.repository.NoteRepository;
+import com.fradou.gtd.back.repository.IncomingRepository;
 import com.fradou.gtd.back.repository.ProjectRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,15 +25,15 @@ import java.util.stream.Stream;
 @AllArgsConstructor
 public class DbTestLoader implements ApplicationRunner {
 
-    private NoteRepository noteRepository;
+    private IncomingRepository incomingRepository;
 
     private ProjectRepository projectRepository;
 
     private NextActionRepository nextActionRepository;
 
     @Autowired
-    public DbTestLoader(NoteRepository noteRepository, ProjectRepository projectRepository, NextActionRepository nextActionRepository) {
-        this.noteRepository = noteRepository;
+    public DbTestLoader(IncomingRepository incomingRepository, ProjectRepository projectRepository, NextActionRepository nextActionRepository) {
+        this.incomingRepository = incomingRepository;
         this.projectRepository = projectRepository;
         this.nextActionRepository = nextActionRepository;
     }
@@ -42,10 +42,10 @@ public class DbTestLoader implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        var notes = Stream.of(1,2,3,4,5,6)
-                .map(id -> Note.builder().id(Long.valueOf(id)).title("title-" + id).content("content-" + id).build())
+        var incomings = Stream.of(1,2,3,4,5,6)
+                .map(id -> Incoming.builder().id(Long.valueOf(id)).title("title-" + id).content("content-" + id).build())
                 .collect(Collectors.toList());
-        noteRepository.saveAll(notes);
+        incomingRepository.saveAll(incomings);
 
         var projects = Stream.of(1,2,3,4,5,6)
                 .map(id -> Project.builder()

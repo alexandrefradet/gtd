@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "notes-front": {
+    "gtd-front": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/notes-front",
+            "outputPath": "dist/gtd-front",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,7 +67,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "notes-front:build"
+            "browserTarget": "gtd-front:build"
           },
           "configurations": {
             "production": {
@@ -78,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "notes-front:build"
+            "browserTarget": "gtd-front:build"
           }
         },
         "test": {
@@ -119,7 +119,7 @@
           },
           "configurations": {
             "production": {
-              "devServerTarget": "notes-front:serve:production"
+              "devServerTarget": "gtd-front:serve:production"
             }
           }
         }

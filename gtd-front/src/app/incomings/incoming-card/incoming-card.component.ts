@@ -1,14 +1,14 @@
 import { Component, ElementRef, EventEmitter, Input, OnInit, Output, Renderer2, ViewChild } from '@angular/core';
-import { Note } from '../note.model';
+import { Incoming } from '../incoming.model';
 
 @Component({
-  selector: 'app-note-card',
-  templateUrl: './note-card.component.html',
-  styleUrls: ['./note-card.component.scss']
+  selector: 'app-incoming-card',
+  templateUrl: './incoming-card.component.html',
+  styleUrls: ['./incoming-card.component.scss']
 })
-export class NoteCardComponent implements OnInit {
+export class IncomingCardComponent implements OnInit {
 
-  @Input() note: Note;
+  @Input() incoming: Incoming;
   @Input() id: number;
 
   // Event sent to parent on X click
@@ -32,7 +32,7 @@ export class NoteCardComponent implements OnInit {
     }
   }
 
-  deleteNote() {
+  deleteIncoming() {
     this.deleteEvent.emit()
   }
 }

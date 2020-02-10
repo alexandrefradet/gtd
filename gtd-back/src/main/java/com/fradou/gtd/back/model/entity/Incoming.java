@@ -15,7 +15,7 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Note {
+public class Incoming {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
